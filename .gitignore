@@ -1,0 +1,92 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python tooling
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Spark / PySpark
+# =========================
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Spark temporary files
+.sparkStaging/
+spark-events/
+
+# =========================
+# Hadoop / MapReduce
+# =========================
+.hadoop/
+hadoop-*.log
+
+# MapReduce generated output
+output/
+outputs/
+
+# =========================
+# Logs / temporary files
+# =========================
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+tmp/
+temp/
+
+# =========================
+# IDEs / editors
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Local data / generated data
+# =========================
+*.parquet
+*.orc
