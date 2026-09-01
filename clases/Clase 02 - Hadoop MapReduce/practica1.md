@@ -230,8 +230,11 @@ def reduce(k2, v2, context):
 
 ### 7) El dataset Inversionistas posee los nombres, dni, fecha de nacimiento(día, mes y año como campos separados) e importe invertido por diferentes personas en laapertura de un nuevo negocio en la ciudad. Se desea saber:
 
-- a. El nombre del inversionista más joven
-- b. El total delimporteinvertido por todos los inversionistas
-- c. El promedio de edad Implemente una solución en MapReduce. ¿Se puede resolver los tresproblemasen un único job?
+- **a. El nombre del inversionista más joven**
+- **b. El total delimporteinvertido por todos los inversionistas**
+- **c. El promedio de edad Implemente una solución en MapReduce.**
+- **¿Se puede resolver los tres problemasen un único job?**
 
 ### 8) Si contáramos con un cluster donde podemos configurar 100 nodos para la tarea de reduce ¿De qué manera se podrían usar esos 100 nodos en el ejemplo de los eventos POSITIVO, NEGATIVO y NEUTRO visto en la teoría?
+
+Este ejercicio apunta a que nuestros mappers no trabajen con 3 key unicas como podrian ser POSITIVO, NEGATIVO y NEUTRO, porque de esa manera solo trabajarian 3 nodos en reduce, la estrategia para esto seria poder agregar un salt random a cada una de las claves intermedias generadas (POSITIVO_1, NEGATIVO_15, NEUTRO_23), de esta manera manejando ese salt de manera random para cada una de las etiquetas base tendriamos hasta 33 de cada una, de esa manera trabajariamos con hasta 99 nodos reduce
