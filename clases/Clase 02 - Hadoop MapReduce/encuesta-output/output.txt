@@ -1,0 +1,6 @@
+Algo satisfecho	1862
+Disconforme	1873
+Muy disconforme	1851
+Muy satisfecho	1860
+Poco satisfecho	1822
+otros	644

@@ -1,0 +1,3 @@
+mayor_dni	Nzkphyv	44438333
+completo	45.65233539673607
+total_invertido	44464100334
