@@ -3,14 +3,9 @@ from MRE import Job
 
 root_path = Path(__file__).parent
 
-inputDir = str(root_path / "Libros")
-outputDir = str(root_path / "wordcount")
+inputDir = str(root_path / "input")
+outputDir = str(root_path / "outputEj2")
 
-print(root_path)
-print(inputDir)
-print(outputDir)
-
-print("------------------------------")
 
 def fmap(key, value, context):
     words = value.split()
@@ -21,9 +16,10 @@ def fmap(key, value, context):
 def fred(key, values, context):
     c = 0
     for v in values:
-        c = c + 1
+        c = c + int(v)
     context.write(key, c)
 
 
 job = Job(inputDir, outputDir, fmap, fred)
+job.setCombiner(fred)
 success = job.waitForCompletion()

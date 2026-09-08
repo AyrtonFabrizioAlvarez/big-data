@@ -1,0 +1,5 @@
+total_palabras	14483
+cantidad_palabras	5253
+promedio	2.757091185988959
+maximo	833	de
+minimo	1	!ah!
