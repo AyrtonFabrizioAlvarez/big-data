@@ -3,7 +3,8 @@ from MRE import Job
 
 root_path = Path(__file__).parent
 
-inputDir = str(root_path / "input_ej1")
+inputDirEstandar = str(Path(__file__).parent.parent / "input_estandar")
+inputDirPremium = str(Path(__file__).parent.parent / "input_premium")
 outputDir = str(root_path / "output_ej1")
 
 def map(key, values, context):
@@ -20,7 +21,8 @@ def map(key, values, context):
 def reduce(key, values, context):
     context.write(key, 1)
 
-job = Job(inputDir, outputDir, map, reduce)
+job = Job(inputDirEstandar, outputDir, map, reduce)
+job.addInputPath(inputDirPremium, map)
 job.setParams({"PARAMETRO": 4799})
 job.setCombiner(reduce)
 success = job.waitForCompletion()
